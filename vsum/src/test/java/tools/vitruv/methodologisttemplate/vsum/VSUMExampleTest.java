@@ -103,6 +103,24 @@ public class VSUMExampleTest {
   }
 
   @Test
+  void insertRepeater(@TempDir Path tempDir) {
+    InternalVirtualModel vsum = createDefaultVirtualModel(tempDir);
+    addSystem(vsum, tempDir);
+    addRepeater(vsum);
+    modifyView(getDefaultView(vsum, List.of(System.class)).withChangeDerivingTrait(), (CommittableView v) -> {
+      v.getRootObjects(System.class).iterator().next().getComponents().add(ModelFactory.eINSTANCE.createRepeater());
+    });
+    Assertions.assertTrue(assertView(getDefaultView(vsum, List.of(System.class, Root.class)), (View v) -> {
+      // assert that the repeater has been added and that the corresponding entity has
+      // been created
+      return v.getRootObjects(System.class).iterator().next()
+          .getComponents().get(0).getName()
+          .equals(v.getRootObjects(Root.class).iterator().next()
+              .getEntities().get(0).getName());
+    }));
+  }
+
+  @Test
   void renameComponent(@TempDir Path tempDir) {
     final String newName = "newName";
     VirtualModel vsum = createDefaultVirtualModel(tempDir);
@@ -199,6 +217,15 @@ public class VSUMExampleTest {
     modifyView(view, (CommittableView v) -> {
       var component = ModelFactory.eINSTANCE.createRouter();
       component.setName("specialRouterName");
+      v.getRootObjects(System.class).iterator().next().getComponents().add(component);
+    });
+  }
+
+  private void addRepeater(VirtualModel vsum) {
+    CommittableView view = getDefaultView(vsum, List.of(System.class)).withChangeDerivingTrait();
+    modifyView(view, (CommittableView v) -> {
+      var component = ModelFactory.eINSTANCE.createRepeater();
+      component.setName("specialRepeaterName");
       v.getRootObjects(System.class).iterator().next().getComponents().add(component);
     });
   }

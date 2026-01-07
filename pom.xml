@@ -30,6 +30,7 @@
 
   <properties>
     <vitruv.version>3.2.3</vitruv.version>
+    <dsls.version>3.2.4-SNAPSHOT</dsls.version> 
   </properties>
 
   <dependencyManagement>
@@ -63,7 +64,7 @@
       <dependency>
         <groupId>tools.vitruv</groupId>
         <artifactId>tools.vitruv.dsls.reactions.runtime</artifactId>
-        <version>${vitruv.version}</version>
+        <version>${dsls.version}</version>
       </dependency>
       <dependency>
         <groupId>tools.vitruv</groupId>

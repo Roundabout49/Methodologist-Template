@@ -27,4 +27,5 @@
         eType="#//Protocol" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Router" eSuperTypes="#//Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Repeater" eSuperTypes="#//Component"/>
 </ecore:EPackage>

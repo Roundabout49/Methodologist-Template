@@ -29,5 +29,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//System/protocols"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Router"/>
+    <genClasses ecoreClass="model.ecore#//Repeater"/>
   </genPackages>
 </genmodel:GenModel>
