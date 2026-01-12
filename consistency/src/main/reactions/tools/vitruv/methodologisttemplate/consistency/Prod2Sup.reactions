@@ -1,0 +1,212 @@
+import tools.vitruv.methodologisttemplate.model.PLM.Domain
+import tools.vitruv.methodologisttemplate.model.PLM.Element
+import tools.vitruv.methodologisttemplate.model.PLM.Entity
+import tools.vitruv.methodologisttemplate.model.PLM.PLMPackage
+
+import static tools.vitruv.methodologisttemplate.consistency.Util.*
+
+import "http://melanee.org/PLM" as producer
+import "http://melanee.org/PLM" as supporter
+
+Reactions: prod2sup
+in reaction to changes in producer
+execute actions in supporter
+
+reaction DomainInserted {
+	after element producer::Domain inserted as root
+	call {
+		insertDomain(newValue)
+	}
+}
+
+routine insertDomain(producer::Domain domain) {
+	match {
+		val producerDomain = retrieve producer::Domain corresponding to PLMPackage.eINSTANCE.domain tagged getTag("producer", domain)
+		require absence of supporter::Domain corresponding to producerDomain
+	}
+	create {
+		val supDomain = new supporter::Domain
+	}
+	update {
+		logger.trace("Domain Inserted")
+		persistProjectRelative(domain, supDomain, "folder/supporter.lml")
+		addCorrespondenceBetween(domain, supDomain)
+	}
+}
+
+reaction DeepModelInserted {
+	after element producer::DeepModel inserted in producer::Domain[deepModel]
+	call {
+		insertDeepModel(newValue)
+	}
+}
+
+routine insertDeepModel(producer::DeepModel model) {
+	match {
+		val producerDeepModel = retrieve producer::DeepModel corresponding to PLMPackage.eINSTANCE.deepModel tagged getTag("producer", model)
+		require absence of supporter::Element corresponding to producerDeepModel
+		val supDomain = retrieve supporter::Domain corresponding to model.eContainer tagged getTag("both", model.eContainer as Domain)
+	}
+	create {
+		val supDeepModel = new supporter::DeepModel
+	}
+	update {
+		logger.trace("DeepModel Inserted")
+		supDomain.deepModel += supDeepModel
+		addCorrespondenceBetween(model, supDeepModel)
+	}
+}
+
+reaction LevelAdded {
+	after element producer::Level inserted in producer::DeepModel[content]
+	call {
+		addLevel(newValue)
+	}
+}
+
+routine addLevel(producer::Level level) {
+	match {
+		require absence of supporter::Element corresponding to level tagged getTag("supporter", level)
+		require absence of producer::Element corresponding to level tagged getTag("supporter", level)
+		val supDeepModel = retrieve supporter::DeepModel corresponding to level.deepModel tagged getTag("both", level.deepModel)
+	}
+	create {
+		val supLevel = new supporter::Level
+	}
+	update {
+		logger.trace("Level Inserted"+ level.level + level)
+		supDeepModel.content += supLevel
+		addCorrespondenceBetween(level, supLevel)
+	}
+}
+
+reaction ElementNameChanged {
+	after attribute replaced at producer::Element[name]
+	call changeName(affectedEObject, newValue)
+}
+
+reaction EtityNameChanged {
+	after attribute replaced at producer::Entity[name]
+	call changeName(affectedEObject, newValue)
+}
+
+reaction OwnedElementNameChanged {
+	after attribute replaced at producer::OwnedElement[name]
+	call changeName(affectedEObject, newValue)
+}
+
+routine changeName(producer::Element elem, String newValue) {
+	match {
+		val otherElem = retrieve producer::Element corresponding to elem tagged getTag("supporter", elem)
+	}
+	update {
+		logger.trace("Updated name of " + otherElem + " from " + otherElem.name +" to" +newValue)
+		otherElem.name = newValue
+	}
+}
+
+reaction NewS400Inserted {
+	after element producer::OwnedElement inserted in producer::Level[content]
+	with {
+		affectedEObject.level === 2 
+		&& (newValue instanceof Entity)
+		&& (newValue as Entity).directType.name == "S400"
+	}
+	call {
+		logger.trace("New S400 inserted" + newValue.name + (newValue as Entity).directType.name)
+		insertNewS400(newValue as Entity)
+	}
+}
+
+routine insertNewS400(producer::Entity ownedElement) {
+	match {
+		val elem = retrieve optional producer::Element corresponding to PLMPackage.eINSTANCE.entity tagged getTag("producer", ownedElement)
+		val type = retrieve producer::Element corresponding to PLMPackage.eINSTANCE.entity tagged getTag("producer", ownedElement.directType)
+		val othertype = retrieve producer::Clabject corresponding to type
+		val producerDeepModel = retrieve producer::DeepModel corresponding to PLMPackage.eINSTANCE.deepModel tagged getTag("producer", ownedElement.deepModel)
+		val supporterDeepModel = retrieve supporter::DeepModel corresponding to producerDeepModel
+	}
+	create {
+	}
+	update {
+		if (!elem.isPresent) {
+			var resolved = resolve(producerDeepModel, supporterDeepModel, resourceAccess)
+			val newElem = PLMPackage.eINSTANCE.PLMFactory.createEntity
+			val newClassification = PLMPackage.eINSTANCE.PLMFactory.createClassification
+			newElem.name = ownedElement.name
+			newClassification.instance = newElem
+			newClassification.type = othertype
+			val level = resolved.getLevelAtIndex(3)
+			level.content += newElem
+			level.content += newClassification
+			addCorrespondenceBetween(ownedElement, newElem, "")
+			addCorrespondenceBetween(ownedElement.classificationsAsInstance.get(0), newClassification, "")
+		} else {
+			// an element is found, check if it has a corresponding element
+			if (getCorrespondingElement(elem.get, Element, [true], getTag("both", ownedElement), true) === null) {
+				// if it does not have a corresponding element, create one
+			}
+		}
+	}
+}
+
+reaction NewFactoryInserted {
+	after element producer::OwnedElement inserted in producer::Level[content]
+	with {
+		affectedEObject.level === 2 
+		&& (newValue instanceof Entity)
+		&& (newValue as Entity).directType.name == "HuaweiMobilePhoneFactory"
+	}
+	call {
+		logger.trace("New HuaweiMobilePhoneFactory inserted" + newValue.name + (newValue as Entity).directType.name)
+		insertNewHuaweiMobilePhoneFactory(newValue as Entity)
+	}
+}
+
+routine insertNewHuaweiMobilePhoneFactory(producer::Entity ownedElement) {
+	match {
+		val elem = retrieve optional producer::Element corresponding to PLMPackage.eINSTANCE.entity tagged getTag("producer", ownedElement)
+		val type = retrieve producer::Element corresponding to PLMPackage.eINSTANCE.entity tagged getTag("producer", ownedElement.directType)
+//		val othertype = retrieve producer::Clabject corresponding to type
+		val producerDeepModel = retrieve producer::DeepModel corresponding to PLMPackage.eINSTANCE.deepModel tagged getTag("producer", ownedElement.deepModel)
+//		val supporterDeepModel = retrieve supporter::DeepModel corresponding to producerDeepModel
+		
+		val othertype = retrieve supporter::Clabject corresponding to ownedElement.directType
+		val supporterDeepModel = retrieve supporter::DeepModel corresponding to ownedElement.deepModel
+		val supporterConnection = retrieve supporter::Entity corresponding to ownedElement.connections.findFirst[it.name === "owns"]
+		val othercompany = retrieve supporter::Entity corresponding to ownedElement.connections.findFirst[it.name === "owns"].participants.findFirst[it.directType.name === "company"]
+	}
+	create {
+	}
+	update {
+		if (!elem.isPresent) {
+			var resolved = resolve(producerDeepModel, supporterDeepModel, resourceAccess)
+			val newFactory = PLMPackage.eINSTANCE.PLMFactory.createEntity
+			newFactory.name = ownedElement.name
+			val level = resolved.getLevelAtIndex(2)
+			val factoryClassification = PLMPackage.eINSTANCE.PLMFactory.createClassification
+			factoryClassification.type = othertype
+			factoryClassification.instance = newFactory
+			
+			val connection = PLMPackage.eINSTANCE.PLMFactory.createConnection
+			val newFactoryConnectionEnd = PLMPackage.eINSTANCE.PLMFactory.createConnectionEnd
+			val companyConnectionEnd = PLMPackage.eINSTANCE.PLMFactory.createConnectionEnd
+			newFactoryConnectionEnd.destination = newFactory
+			connection.allConnectionEnd += newFactoryConnectionEnd
+			companyConnectionEnd.destination = othercompany
+			connection.allConnectionEnd += companyConnectionEnd
+			val connectionClassification = PLMPackage.eINSTANCE.PLMFactory.createClassification
+			connectionClassification.type = supporterConnection
+			connectionClassification.instance = connection
+			level.content += newFactory
+			level.content += factoryClassification
+			level.content += connection
+			level.content += connectionClassification
+		} else {
+			// an element is found, check if it has a corresponding element
+			if (getCorrespondingElement(elem.get, Element, [true], getTag("both", ownedElement), true) === null) {
+				// if it does not have a corresponding element, create one
+			}
+		}
+	}
+}

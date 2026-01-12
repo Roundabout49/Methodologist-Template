@@ -22,4 +22,12 @@
             genModel="src/main/ecore/model2.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated PLM -->
+      <package
+            uri="http://melanee.org/PLM"
+            class="tools.vitruv.methodologisttemplate.model.PLM.PLMPackage"
+            genModel="src/main/ecore/PLM.genmodel"/>
+   </extension>
+
 </plugin>
