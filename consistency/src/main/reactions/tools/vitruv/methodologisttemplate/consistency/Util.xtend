@@ -10,8 +10,10 @@ import tools.vitruv.methodologisttemplate.model.PLM.Entity
 import tools.vitruv.methodologisttemplate.model.PLM.PLMFactory
 import tools.vitruv.methodologisttemplate.model.PLM.Classification
 import tools.vitruv.methodologisttemplate.model.PLM.Connection
+import tools.vitruv.methodologisttemplate.model.PLM.DeepModel
 import tools.vitruv.methodologisttemplate.model.PLM.Domain
 import tools.vitruv.methodologisttemplate.model.PLM.Element
+import tools.vitruv.methodologisttemplate.model.PLM.Level
 import org.eclipse.emf.common.util.URI
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl
 import org.eclipse.emf.ecore.util.EcoreUtil
@@ -24,11 +26,22 @@ class Util {
 		clabjects.findFirst[it.name == name]
 		
 	}
+
+	static def int getLevelIndex(Level level) {
+		val deepModel = level.eContainer as DeepModel
+		return deepModel.content.indexOf(level) - 1
+	}
 	
 	static def int getLevel(OwnedElement element) {
-//		println(((element as EObject).eClass.EAllStructuralFeatures.findFirst[it.name == "levelIndex"].eContents.get(1) as EGenericType))
-//		println(element.eGet(element.eClass.EAllStructuralFeatures.findFirst[it.name == "levelIndex"]))
-		return 0
+		val level = element.eContainer as Level
+		return getLevelIndex(level)
+	}
+
+	static def Level getLevelAtIndex(DeepModel deepModel, int level) {
+		if (level >= 0 && level < deepModel.content.size) {
+			return deepModel.content.get(level + 1)
+		}
+		return null
 	}
 	
 	static def String getTag(String model, Domain domain) {

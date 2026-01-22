@@ -5,7 +5,7 @@
     <semanticResources>PLM.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_qzX88Ou3EfCfD69Qb2vEgg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vGW1EOu3EfCfD69Qb2vEgg" name="PLM class diagram" repPath="#_vClvYOu3EfCfD69Qb2vEgg" changeId="1767795881977">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_vGW1EOu3EfCfD69Qb2vEgg" name="PLM class diagram" repPath="#_vClvYOu3EfCfD69Qb2vEgg" changeId="1768294935436">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="PLM.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -3536,7 +3536,9 @@
       <target xmi:type="ecore:EReference" href="PLM.ecore#//Supertype/supertype"/>
       <semanticElements xmi:type="ecore:EReference" href="PLM.ecore#//Supertype/supertype"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_SFRPA-u4EfCfD69Qb2vEgg" description="_SFRPAOu4EfCfD69Qb2vEgg" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SFRPBeu4EfCfD69Qb2vEgg" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SFRPBeu4EfCfD69Qb2vEgg" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_SFRPBOu4EfCfD69Qb2vEgg" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
         </endLabelStyle>
@@ -3547,7 +3549,9 @@
       <target xmi:type="ecore:EReference" href="PLM.ecore#//Subtype/subtype"/>
       <semanticElements xmi:type="ecore:EReference" href="PLM.ecore#//Subtype/subtype"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_SFWukOu4EfCfD69Qb2vEgg" description="_SFRPAOu4EfCfD69Qb2vEgg" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SFWukuu4EfCfD69Qb2vEgg" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SFWukuu4EfCfD69Qb2vEgg" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_SFWukeu4EfCfD69Qb2vEgg" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
         </endLabelStyle>
@@ -3558,7 +3562,9 @@
       <target xmi:type="ecore:EReference" href="PLM.ecore#//Classification/instance"/>
       <semanticElements xmi:type="ecore:EReference" href="PLM.ecore#//Classification/instance"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_SFbnEOu4EfCfD69Qb2vEgg" description="_SFRPAOu4EfCfD69Qb2vEgg" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SFbnEuu4EfCfD69Qb2vEgg" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SFbnEuu4EfCfD69Qb2vEgg" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_SFbnEeu4EfCfD69Qb2vEgg" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
         </endLabelStyle>
@@ -3569,7 +3575,9 @@
       <target xmi:type="ecore:EReference" href="PLM.ecore#//Classification/type"/>
       <semanticElements xmi:type="ecore:EReference" href="PLM.ecore#//Classification/type"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_SFhGoOu4EfCfD69Qb2vEgg" description="_SFRPAOu4EfCfD69Qb2vEgg" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SFhGouu4EfCfD69Qb2vEgg" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SFhGouu4EfCfD69Qb2vEgg" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_SFhGoeu4EfCfD69Qb2vEgg" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
         </endLabelStyle>
@@ -3602,7 +3610,9 @@
       <target xmi:type="ecore:EReference" href="PLM.ecore#//ConnectionEnd/destination"/>
       <semanticElements xmi:type="ecore:EReference" href="PLM.ecore#//ConnectionEnd/destination"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_SFwXMOu4EfCfD69Qb2vEgg" description="_SFRPAOu4EfCfD69Qb2vEgg" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SFwXMuu4EfCfD69Qb2vEgg" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SFwXMuu4EfCfD69Qb2vEgg" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_SFwXMeu4EfCfD69Qb2vEgg" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
         </endLabelStyle>
@@ -3647,7 +3657,9 @@
       <target xmi:type="ecore:EReference" href="PLM.ecore#//ClabjectParameter/datatype"/>
       <semanticElements xmi:type="ecore:EReference" href="PLM.ecore#//ClabjectParameter/datatype"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_SGBc8Ou4EfCfD69Qb2vEgg" description="_SFRPAOu4EfCfD69Qb2vEgg" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SGBc8uu4EfCfD69Qb2vEgg" showIcon="false"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SGBc8uu4EfCfD69Qb2vEgg" showIcon="false">
+          <labelFormat>bold</labelFormat>
+        </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_SGBc8eu4EfCfD69Qb2vEgg" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
         </endLabelStyle>

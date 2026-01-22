@@ -1,3 +1,4 @@
+import tools.vitruv.methodologisttemplate.model.PLM.DeepModel
 import tools.vitruv.methodologisttemplate.model.PLM.Domain
 import tools.vitruv.methodologisttemplate.model.PLM.Element
 import tools.vitruv.methodologisttemplate.model.PLM.Entity
@@ -68,7 +69,7 @@ routine addLevel(producer::Level level) {
 	match {
 		require absence of supporter::Element corresponding to level tagged getTag("supporter", level)
 		require absence of producer::Element corresponding to level tagged getTag("supporter", level)
-		val supDeepModel = retrieve supporter::DeepModel corresponding to level.deepModel tagged getTag("both", level.deepModel)
+		val supDeepModel = retrieve supporter::DeepModel corresponding to level.eContainer tagged getTag("both", level.eContainer as DeepModel)
 	}
 	create {
 		val supLevel = new supporter::Level
@@ -108,7 +109,7 @@ routine changeName(producer::Element elem, String newValue) {
 reaction NewS400Inserted {
 	after element producer::OwnedElement inserted in producer::Level[content]
 	with {
-		affectedEObject.level === 2 
+		getLevelIndex(affectedEObject) == 2
 		&& (newValue instanceof Entity)
 		&& (newValue as Entity).directType.name == "S400"
 	}
@@ -136,7 +137,7 @@ routine insertNewS400(producer::Entity ownedElement) {
 			newElem.name = ownedElement.name
 			newClassification.instance = newElem
 			newClassification.type = othertype
-			val level = resolved.getLevelAtIndex(3)
+			val level = getLevelAtIndex(resolved, 2)
 			level.content += newElem
 			level.content += newClassification
 			addCorrespondenceBetween(ownedElement, newElem, "")
@@ -153,7 +154,7 @@ routine insertNewS400(producer::Entity ownedElement) {
 reaction NewFactoryInserted {
 	after element producer::OwnedElement inserted in producer::Level[content]
 	with {
-		affectedEObject.level === 2 
+		getLevelIndex(affectedEObject) == 2
 		&& (newValue instanceof Entity)
 		&& (newValue as Entity).directType.name == "HuaweiMobilePhoneFactory"
 	}

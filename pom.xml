@@ -31,7 +31,17 @@
   <properties>
     <vitruv.version>3.2.3</vitruv.version>
     <dsls.version>4.4.4-SNAPSHOT</dsls.version> 
+    <tycho.version>2.7.5</tycho.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <repositories>
+    <repository>
+      <id>eclipse-releases</id>
+      <name>Eclipse Releases</name>
+      <url>https://repo.eclipse.org/content/repositories/releases/</url>
+    </repository>
+  </repositories>
 
   <dependencyManagement>
     <dependencies>
@@ -76,6 +86,11 @@
         <artifactId>tools.vitruv.framework.vsum</artifactId>
         <version>${vitruv.version}</version>
       </dependency>
+      <dependency>
+        <groupId>tools.vitruv</groupId>
+        <artifactId>tools.vitruv.framework.testutils.integration</artifactId>
+        <version>${vitruv.version}</version>
+      </dependency>
 
       <!-- external dependencies-->
       <dependency>
@@ -89,10 +104,53 @@
         <version>2.41.0</version>
       </dependency>
       <dependency>
+          <groupId>org.eclipse.ocl</groupId>
+          <artifactId>org.eclipse.ocl</artifactId>
+          <version>3.4.2.v20140725-2242</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.ocl</groupId>
+        <artifactId>org.eclipse.ocl.ecore</artifactId>
+        <version>3.3.100.v20140610-0641</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.ocl</groupId>
+        <artifactId>org.eclipse.ocl.common</artifactId>
+        <version>1.2.0.v20140610-0641</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.eclipse.xtext</groupId>
+          <artifactId>org.eclipse.xtext</artifactId>
+          <version>2.27.0</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.eclipse.xtext</groupId>
+        <artifactId>org.eclipse.xtext.xbase.lib</artifactId>
+        <version>2.41.0</version>
+      </dependency>
+      <dependency>
+        <groupId>lpg.runtime.java</groupId>
+        <artifactId>lpg.runtime.java</artifactId>
+        <version>2.0.17.v201004271640</version>
+      </dependency>
+      <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
         <version>6.0.1</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho.version}</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
 </project>

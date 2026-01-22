@@ -9,6 +9,7 @@
         <groupId>tools.vitruv</groupId>
         <artifactId>tools.vitruv.methodologisttemplate</artifactId>
         <version>0.1.0-SNAPSHOT</version>
+        <packaging>eclipse-plugin</packaging>
     </parent>
 
     <artifactId>tools.vitruv.methodologisttemplate.vsum</artifactId>
@@ -51,17 +52,94 @@
             <groupId>tools.vitruv</groupId>
             <artifactId>tools.vitruv.framework.vsum</artifactId>
         </dependency>
+        <dependency>
+            <groupId>tools.vitruv</groupId>
+            <artifactId>tools.vitruv.framework.testutils.integration</artifactId>
+        </dependency>
 
         <!-- external dependencies -->
         <dependency>
             <groupId>org.eclipse.emf</groupId>
             <artifactId>org.eclipse.emf.ecore</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.eclipse.emf</groupId>
+            <artifactId>org.eclipse.emf.common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.ocl</groupId>
+            <artifactId>org.eclipse.ocl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.ocl</groupId>
+            <artifactId>org.eclipse.ocl.ecore</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.ocl</groupId>
+            <artifactId>org.eclipse.ocl.common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.xtext</groupId>
+            <artifactId>org.eclipse.xtext</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.xtext</groupId>
+            <artifactId>org.eclipse.xtext.xbase.lib</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>lpg.runtime.java</groupId>
+            <artifactId>lpg.runtime.java</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                    <id>add-generated-sources</id>
+                    <phase>generate-sources</phase>
+                    <goals>
+                        <goal>add-source</goal>
+                    </goals>
+                    <configuration>
+                        <sources>
+                        <source>${project.build.directory}/generated-sources/xtend</source>
+                        </sources>
+                    </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.xtend</groupId>
+                <artifactId>xtend-maven-plugin</artifactId>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/generated-sources/xtend</outputDirectory>
+                    <testOutputDirectory>${project.build.directory}/generated-test-sources/xtend</testOutputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                    <goals>
+                        <goal>compile</goal>
+                    </goals>
+                    </execution>
+                    <execution>
+                    <id>compile-test</id>
+                    <phase>generate-test-sources</phase>
+                    <goals>
+                        <goal>testCompile</goal>
+                    </goals>
+                    </execution>
+                </executions>
+            </plugin> 
+        </plugins>
+    </build>
+
 </project>

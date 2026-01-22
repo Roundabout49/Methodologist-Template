@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:PLM="http://melanee.org/PLM">
+  <PLM:Domain xmi:id="_1WiQ4BKdEe-4CsrESsjhOA">
+    <deepModel xmi:type="PLM:DeepModel" xmi:id="_1wnk0BKdEe-4CsrESsjhOA">
+      <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_1wxV0BKdEe-4CsrESsjhOA">
+        <attributes>name= default</attributes>
+        <attributes>showClassificationConnectionEndNames = false</attributes>
+        <attributes>text= derived</attributes>
+        <attributes>graph= derived</attributes>
+        <attributes>form= derived</attributes>
+        <attributes>table= derived</attributes>
+        <attributes>app= derived</attributes>
+      </visualizer>
+      <content xmi:type="PLM:Level" xmi:id="_19imgBKdEe-4CsrESsjhOA" name="O0">
+        <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_19imgRKdEe-4CsrESsjhOA">
+          <attributes>name= default</attributes>
+          <attributes>text= derived</attributes>
+          <attributes>graph= derived</attributes>
+          <attributes>form= derived</attributes>
+          <attributes>table= derived</attributes>
+          <attributes>app= derived</attributes>
+        </visualizer>
+        <content xmi:type="PLM:Entity" xmi:id="_6D5X4BKdEe-4CsrESsjhOA" name="DeviceModel" potency="2">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_6D5X4RKdEe-4CsrESsjhOA" xLocation="889" yLocation="0">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+        </content>
+        <content xmi:type="PLM:Entity" xmi:id="_8OEwcBKdEe-4CsrESsjhOA" name="MobilePhoneModel" potency="2">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_8OEwcRKdEe-4CsrESsjhOA" xLocation="869" yLocation="86">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+          <feature xmi:type="PLM:Attribute" xmi:id="_AhqskBKeEe-4CsrESsjhOA" name="RAM" durability="2" mutability="2" datatype="Integer">
+            <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_AhqskRKeEe-4CsrESsjhOA">
+              <attributes>name= default</attributes>
+              <attributes>durability= default</attributes>
+              <attributes>parsingOrder= default</attributes>
+              <attributes>value= default</attributes>
+              <attributes>mutability= default</attributes>
+              <attributes>datatype= default</attributes>
+            </visualizer>
+          </feature>
+        </content>
+        <content xmi:type="PLM:Entity" xmi:id="_-3tsMBKdEe-4CsrESsjhOA" name="HuaweiMobilePhoneModel" potency="2">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_-3tsMRKdEe-4CsrESsjhOA" xLocation="869" yLocation="181">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+        </content>
+        <content xmi:type="PLM:Inheritance" xmi:id="_CNt-sBKeEe-4CsrESsjhOA">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_CNt-sRKeEe-4CsrESsjhOA" xLocation="932" yLocation="56">
+            <attributes>name= default</attributes>
+            <attributes>disjoint= default</attributes>
+            <attributes>complete= default</attributes>
+            <attributes>collapsed= true</attributes>
+          </visualizer>
+          <supertype xmi:type="PLM:Supertype" xmi:id="_DB08MBKeEe-4CsrESsjhOA" supertype="_6D5X4BKdEe-4CsrESsjhOA"/>
+          <subtype xmi:type="PLM:Subtype" xmi:id="_EGwj8BKeEe-4CsrESsjhOA" subtype="_8OEwcBKdEe-4CsrESsjhOA"/>
+        </content>
+        <content xmi:type="PLM:Inheritance" xmi:id="_FBUHsBKeEe-4CsrESsjhOA">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_FBUHsRKeEe-4CsrESsjhOA" xLocation="923" yLocation="153">
+            <attributes>name= default</attributes>
+            <attributes>disjoint= default</attributes>
+            <attributes>complete= default</attributes>
+            <attributes>collapsed= true</attributes>
+          </visualizer>
+          <supertype xmi:type="PLM:Supertype" xmi:id="_FmobQBKeEe-4CsrESsjhOA" supertype="_8OEwcBKdEe-4CsrESsjhOA"/>
+          <subtype xmi:type="PLM:Subtype" xmi:id="_GK0tcBKeEe-4CsrESsjhOA" subtype="_-3tsMBKdEe-4CsrESsjhOA"/>
+        </content>
+      </content>
+      <content xmi:type="PLM:Level" xmi:id="_2JuBUBKdEe-4CsrESsjhOA" name="O1">
+        <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_2JuBURKdEe-4CsrESsjhOA">
+          <attributes>name= default</attributes>
+          <attributes>text= derived</attributes>
+          <attributes>graph= derived</attributes>
+          <attributes>form= derived</attributes>
+          <attributes>table= derived</attributes>
+          <attributes>app= derived</attributes>
+        </visualizer>
+        <content xmi:type="PLM:Entity" xmi:id="_LsJA8BKeEe-4CsrESsjhOA" name="Device" potency="0">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_LsJA8RKeEe-4CsrESsjhOA" xLocation="779" yLocation="10">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+        </content>
+        <content xmi:type="PLM:Entity" xmi:id="_Nzd50BKeEe-4CsrESsjhOA" name="Company">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_Nzd50RKeEe-4CsrESsjhOA" xLocation="479" yLocation="5">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+          <feature xmi:type="PLM:Attribute" xmi:id="_YnI3wBKeEe-4CsrESsjhOA" name="name" durability="1" mutability="1" datatype="String">
+            <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_YnI3wRKeEe-4CsrESsjhOA">
+              <attributes>name= default</attributes>
+              <attributes>durability= default</attributes>
+              <attributes>parsingOrder= default</attributes>
+              <attributes>value= default</attributes>
+              <attributes>mutability= default</attributes>
+              <attributes>datatype= default</attributes>
+            </visualizer>
+          </feature>
+        </content>
+        <content xmi:type="PLM:Entity" xmi:id="_PbeZcBKeEe-4CsrESsjhOA" name="Factory" potency="0">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_PbeZcRKeEe-4CsrESsjhOA" xLocation="227" yLocation="12">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+        </content>
+        <content xmi:type="PLM:Entity" xmi:id="_QMkfMBKeEe-4CsrESsjhOA" name="MobilePhoneFactory" potency="0">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_QMkfMRKeEe-4CsrESsjhOA" xLocation="184" yLocation="105">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+        </content>
+        <content xmi:type="PLM:Entity" xmi:id="_RxLskBKeEe-4CsrESsjhOA" name="HuaweiMobilePhoneFactory">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_RxLskRKeEe-4CsrESsjhOA" xLocation="164" yLocation="191">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+        </content>
+        <content xmi:type="PLM:Inheritance" xmi:id="_aI924BKeEe-4CsrESsjhOA">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_aI924RKeEe-4CsrESsjhOA" xLocation="242" yLocation="64">
+            <attributes>name= default</attributes>
+            <attributes>disjoint= default</attributes>
+            <attributes>complete= default</attributes>
+            <attributes>collapsed= true</attributes>
+          </visualizer>
+          <supertype xmi:type="PLM:Supertype" xmi:id="_axJRMBKeEe-4CsrESsjhOA" supertype="_PbeZcBKeEe-4CsrESsjhOA"/>
+          <subtype xmi:type="PLM:Subtype" xmi:id="_bVpscBKeEe-4CsrESsjhOA" subtype="_QMkfMBKeEe-4CsrESsjhOA"/>
+        </content>
+        <content xmi:type="PLM:Inheritance" xmi:id="_b-XSQBKeEe-4CsrESsjhOA">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_b-XSQRKeEe-4CsrESsjhOA" xLocation="238" yLocation="164">
+            <attributes>name= default</attributes>
+            <attributes>disjoint= default</attributes>
+            <attributes>complete= default</attributes>
+            <attributes>collapsed= true</attributes>
+          </visualizer>
+          <supertype xmi:type="PLM:Supertype" xmi:id="_cighIBKeEe-4CsrESsjhOA" supertype="_QMkfMBKeEe-4CsrESsjhOA"/>
+          <subtype xmi:type="PLM:Subtype" xmi:id="_dAIRQBKeEe-4CsrESsjhOA" subtype="_RxLskBKeEe-4CsrESsjhOA"/>
+        </content>
+        <content xmi:type="PLM:Entity" xmi:id="_hs7XkBKeEe-4CsrESsjhOA" name="MobilePhoneDevice">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_htFIkBKeEe-4CsrESsjhOA" xLocation="704" yLocation="100">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+          <feature xmi:type="PLM:Attribute" xmi:id="_htFIkRKeEe-4CsrESsjhOA" name="RAM" durability="1" mutability="1" datatype="Integer">
+            <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_htFIkhKeEe-4CsrESsjhOA">
+              <attributes>name= default</attributes>
+              <attributes>durability= default</attributes>
+              <attributes>parsingOrder= default</attributes>
+              <attributes>value= default</attributes>
+              <attributes>mutability= default</attributes>
+              <attributes>datatype= default</attributes>
+            </visualizer>
+          </feature>
+          <feature xmi:type="PLM:Attribute" xmi:id="_lMsDABKeEe-4CsrESsjhOA" name="IMEI" durability="1" mutability="1" datatype="String">
+            <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_lMsDARKeEe-4CsrESsjhOA">
+              <attributes>name= default</attributes>
+              <attributes>durability= default</attributes>
+              <attributes>parsingOrder= default</attributes>
+              <attributes>value= default</attributes>
+              <attributes>mutability= default</attributes>
+              <attributes>datatype= default</attributes>
+            </visualizer>
+          </feature>
+        </content>
+        <content xmi:type="PLM:Classification" xmi:id="_htFIkxKeEe-4CsrESsjhOA" instance="_hs7XkBKeEe-4CsrESsjhOA" type="_8OEwcBKdEe-4CsrESsjhOA"/>
+        <content xmi:type="PLM:Inheritance" xmi:id="_jYoEYBKeEe-4CsrESsjhOA">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_jYoEYRKeEe-4CsrESsjhOA" xLocation="792" yLocation="69">
+            <attributes>name= default</attributes>
+            <attributes>disjoint= default</attributes>
+            <attributes>complete= default</attributes>
+            <attributes>collapsed= true</attributes>
+          </visualizer>
+          <supertype xmi:type="PLM:Supertype" xmi:id="_j8g0kBKeEe-4CsrESsjhOA" supertype="_LsJA8BKeEe-4CsrESsjhOA"/>
+          <subtype xmi:type="PLM:Subtype" xmi:id="_keECcBKeEe-4CsrESsjhOA" subtype="_hs7XkBKeEe-4CsrESsjhOA"/>
+        </content>
+        <content xmi:type="PLM:Entity" xmi:id="_nhAPABKeEe-4CsrESsjhOA" name="HuaweiMobilePhoneDevice" potency="0">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_nhAPAhKeEe-4CsrESsjhOA" xLocation="674" yLocation="220">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+          <feature xmi:type="PLM:Attribute" xmi:id="_nhAPAxKeEe-4CsrESsjhOA" name="RAM" durability="1" mutability="1" datatype="Integer">
+            <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_nhAPBBKeEe-4CsrESsjhOA">
+              <attributes>name= default</attributes>
+              <attributes>durability= default</attributes>
+              <attributes>parsingOrder= default</attributes>
+              <attributes>value= default</attributes>
+              <attributes>mutability= default</attributes>
+              <attributes>datatype= default</attributes>
+            </visualizer>
+          </feature>
+        </content>
+        <content xmi:type="PLM:Classification" xmi:id="_nhAPBRKeEe-4CsrESsjhOA" instance="_nhAPABKeEe-4CsrESsjhOA" type="_-3tsMBKdEe-4CsrESsjhOA"/>
+        <content xmi:type="PLM:Inheritance" xmi:id="_p1638BKeEe-4CsrESsjhOA">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_p1638RKeEe-4CsrESsjhOA" xLocation="819" yLocation="185">
+            <attributes>name= default</attributes>
+            <attributes>disjoint= default</attributes>
+            <attributes>complete= default</attributes>
+            <attributes>collapsed= true</attributes>
+          </visualizer>
+          <supertype xmi:type="PLM:Supertype" xmi:id="_qYL3gBKeEe-4CsrESsjhOA" supertype="_hs7XkBKeEe-4CsrESsjhOA"/>
+          <subtype xmi:type="PLM:Subtype" xmi:id="_q5WD0BKeEe-4CsrESsjhOA" subtype="_nhAPABKeEe-4CsrESsjhOA"/>
+        </content>
+        <content xmi:type="PLM:Connection" xmi:id="_s3HYIxKeEe-4CsrESsjhOA" name="owns">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_s3HYJBKeEe-4CsrESsjhOA">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+            <attributes>collapsed= true</attributes>
+          </visualizer>
+          <connectionEnd xmi:type="PLM:ConnectionEnd" xmi:id="_s3HYJRKeEe-4CsrESsjhOA" name="factory" destination="_PbeZcBKeEe-4CsrESsjhOA"/>
+          <connectionEnd xmi:type="PLM:ConnectionEnd" xmi:id="_s3HYLxKeEe-4CsrESsjhOA" name="company" lower="1" upper="1" destination="_Nzd50BKeEe-4CsrESsjhOA"/>
+        </content>
+        <content xmi:type="PLM:Connection" xmi:id="_xhgDoxKeEe-4CsrESsjhOA" name="produces">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_xhgDpBKeEe-4CsrESsjhOA" xLocation="514" yLocation="75">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+            <attributes>collapsed= true</attributes>
+          </visualizer>
+          <connectionEnd xmi:type="PLM:ConnectionEnd" xmi:id="_xhgDpRKeEe-4CsrESsjhOA" name="device" destination="_LsJA8BKeEe-4CsrESsjhOA"/>
+          <connectionEnd xmi:type="PLM:ConnectionEnd" xmi:id="_xhgDrxKeEe-4CsrESsjhOA" name="producer" destination="_PbeZcBKeEe-4CsrESsjhOA"/>
+        </content>
+        <content xmi:type="PLM:Entity" xmi:id="_BIPu8BKfEe-4CsrESsjhOA" name="S400">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_BIPu8hKfEe-4CsrESsjhOA" xLocation="624" yLocation="355">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+          <feature xmi:type="PLM:Attribute" xmi:id="_BIPu8xKfEe-4CsrESsjhOA" name="RAM" durability="1" mutability="1" datatype="Integer">
+            <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_BIPu9BKfEe-4CsrESsjhOA">
+              <attributes>name= default</attributes>
+              <attributes>durability= default</attributes>
+              <attributes>parsingOrder= default</attributes>
+              <attributes>value= default</attributes>
+              <attributes>mutability= default</attributes>
+              <attributes>datatype= default</attributes>
+            </visualizer>
+          </feature>
+        </content>
+        <content xmi:type="PLM:Classification" xmi:id="_BIPu9RKfEe-4CsrESsjhOA" instance="_BIPu8BKfEe-4CsrESsjhOA" type="_-3tsMBKdEe-4CsrESsjhOA"/>
+        <content xmi:type="PLM:Entity" xmi:id="_Cav4oBKfEe-4CsrESsjhOA" name="S500">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_Cav4ohKfEe-4CsrESsjhOA" xLocation="1039" yLocation="355">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+          <feature xmi:type="PLM:Attribute" xmi:id="_Cav4oxKfEe-4CsrESsjhOA" name="RAM" durability="1" mutability="1" datatype="Integer">
+            <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_Cav4pBKfEe-4CsrESsjhOA">
+              <attributes>name= default</attributes>
+              <attributes>durability= default</attributes>
+              <attributes>parsingOrder= default</attributes>
+              <attributes>value= default</attributes>
+              <attributes>mutability= default</attributes>
+              <attributes>datatype= default</attributes>
+            </visualizer>
+          </feature>
+        </content>
+        <content xmi:type="PLM:Classification" xmi:id="_Cav4pRKfEe-4CsrESsjhOA" instance="_Cav4oBKfEe-4CsrESsjhOA" type="_-3tsMBKdEe-4CsrESsjhOA"/>
+        <content xmi:type="PLM:Inheritance" xmi:id="_DWyDEBKfEe-4CsrESsjhOA">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_DWyDERKfEe-4CsrESsjhOA" xLocation="935" yLocation="319">
+            <attributes>name= default</attributes>
+            <attributes>disjoint= default</attributes>
+            <attributes>complete= default</attributes>
+            <attributes>collapsed= true</attributes>
+          </visualizer>
+          <supertype xmi:type="PLM:Supertype" xmi:id="_E_9AUBKfEe-4CsrESsjhOA" supertype="_nhAPABKeEe-4CsrESsjhOA"/>
+          <subtype xmi:type="PLM:Subtype" xmi:id="_FmHocBKfEe-4CsrESsjhOA" subtype="_BIPu8BKfEe-4CsrESsjhOA"/>
+          <subtype xmi:type="PLM:Subtype" xmi:id="_GOf3EBKfEe-4CsrESsjhOA" subtype="_Cav4oBKfEe-4CsrESsjhOA"/>
+        </content>
+      </content>
+      <content xmi:type="PLM:Level" xmi:id="_2XjpABKdEe-4CsrESsjhOA" name="O2">
+        <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_2XjpARKdEe-4CsrESsjhOA">
+          <attributes>name= default</attributes>
+          <attributes>text= derived</attributes>
+          <attributes>graph= derived</attributes>
+          <attributes>form= derived</attributes>
+          <attributes>table= derived</attributes>
+          <attributes>app= derived</attributes>
+        </visualizer>
+        <content xmi:type="PLM:Entity" xmi:id="_JcgrMBKfEe-4CsrESsjhOA" name="Huawei" potency="0">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_JcgrMhKfEe-4CsrESsjhOA" xLocation="929" yLocation="50">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+          <feature xmi:type="PLM:Attribute" xmi:id="_JcgrMxKfEe-4CsrESsjhOA" name="name" value="Huawei" datatype="String">
+            <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_JcgrNBKfEe-4CsrESsjhOA">
+              <attributes>name= default</attributes>
+              <attributes>durability= default</attributes>
+              <attributes>parsingOrder= default</attributes>
+              <attributes>value= default</attributes>
+              <attributes>mutability= default</attributes>
+              <attributes>datatype= default</attributes>
+            </visualizer>
+          </feature>
+        </content>
+        <content xmi:type="PLM:Classification" xmi:id="_JcgrNRKfEe-4CsrESsjhOA" instance="_JcgrMBKfEe-4CsrESsjhOA" type="_Nzd50BKeEe-4CsrESsjhOA"/>
+        <content xmi:type="PLM:Entity" xmi:id="_MV1BsBKfEe-4CsrESsjhOA" name="Factory124" potency="0">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_MV1BshKfEe-4CsrESsjhOA" xLocation="514" yLocation="55">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+        </content>
+        <content xmi:type="PLM:Classification" xmi:id="_MV1BsxKfEe-4CsrESsjhOA" instance="_MV1BsBKfEe-4CsrESsjhOA" type="_RxLskBKeEe-4CsrESsjhOA"/>
+        <content xmi:type="PLM:Connection" xmi:id="_PPIKGBKfEe-4CsrESsjhOA" potency="0">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_PPIKJRKfEe-4CsrESsjhOA" xLocation="779" yLocation="70">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+            <attributes>collapsed= true</attributes>
+          </visualizer>
+          <connectionEnd xmi:type="PLM:ConnectionEnd" xmi:id="_PPIKGhKfEe-4CsrESsjhOA" lower="1" upper="1" destination="_JcgrMBKfEe-4CsrESsjhOA" type="_s3HYLxKeEe-4CsrESsjhOA"/>
+          <connectionEnd xmi:type="PLM:ConnectionEnd" xmi:id="_PPIKJBKfEe-4CsrESsjhOA" destination="_MV1BsBKfEe-4CsrESsjhOA" type="_s3HYJRKeEe-4CsrESsjhOA"/>
+        </content>
+        <content xmi:type="PLM:Classification" xmi:id="_PPIKJhKfEe-4CsrESsjhOA" instance="_PPIKGBKfEe-4CsrESsjhOA" type="_s3HYIxKeEe-4CsrESsjhOA"/>
+        <content xmi:type="PLM:Entity" xmi:id="_SeJDwBKfEe-4CsrESsjhOA" name="S400_001" potency="0">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_SeJDwhKfEe-4CsrESsjhOA" xLocation="199" yLocation="10">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+          <feature xmi:type="PLM:Attribute" xmi:id="_SeSNsBKfEe-4CsrESsjhOA" name="IMEI" value="001468723648726" datatype="String">
+            <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_SeSNsRKfEe-4CsrESsjhOA">
+              <attributes>name= default</attributes>
+              <attributes>durability= default</attributes>
+              <attributes>parsingOrder= default</attributes>
+              <attributes>value= default</attributes>
+              <attributes>mutability= default</attributes>
+              <attributes>datatype= default</attributes>
+            </visualizer>
+          </feature>
+          <feature xmi:type="PLM:Attribute" xmi:id="_SeSNshKfEe-4CsrESsjhOA" name="RAM" value="4" datatype="Integer">
+            <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_SeSNsxKfEe-4CsrESsjhOA">
+              <attributes>name= default</attributes>
+              <attributes>durability= default</attributes>
+              <attributes>parsingOrder= default</attributes>
+              <attributes>value= default</attributes>
+              <attributes>mutability= default</attributes>
+              <attributes>datatype= default</attributes>
+            </visualizer>
+          </feature>
+        </content>
+        <content xmi:type="PLM:Classification" xmi:id="_SeSNtBKfEe-4CsrESsjhOA" instance="_SeJDwBKfEe-4CsrESsjhOA" type="_BIPu8BKfEe-4CsrESsjhOA"/>
+        <content xmi:type="PLM:Entity" xmi:id="_XU7MgBKfEe-4CsrESsjhOA" name="S400_002" potency="0">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_XU7MghKfEe-4CsrESsjhOA" xLocation="194" yLocation="170">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+          </visualizer>
+          <feature xmi:type="PLM:Attribute" xmi:id="_XU7MgxKfEe-4CsrESsjhOA" name="IMEI" value="0018768768475638" datatype="String">
+            <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_XU7MhBKfEe-4CsrESsjhOA">
+              <attributes>name= default</attributes>
+              <attributes>durability= default</attributes>
+              <attributes>parsingOrder= default</attributes>
+              <attributes>value= default</attributes>
+              <attributes>mutability= default</attributes>
+              <attributes>datatype= default</attributes>
+            </visualizer>
+          </feature>
+          <feature xmi:type="PLM:Attribute" xmi:id="_XU7MhRKfEe-4CsrESsjhOA" name="RAM" value="8" datatype="Integer">
+            <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_XU7MhhKfEe-4CsrESsjhOA">
+              <attributes>name= default</attributes>
+              <attributes>durability= default</attributes>
+              <attributes>parsingOrder= default</attributes>
+              <attributes>value= default</attributes>
+              <attributes>mutability= default</attributes>
+              <attributes>datatype= default</attributes>
+            </visualizer>
+          </feature>
+        </content>
+        <content xmi:type="PLM:Classification" xmi:id="_XU7MhxKfEe-4CsrESsjhOA" instance="_XU7MgBKfEe-4CsrESsjhOA" type="_BIPu8BKfEe-4CsrESsjhOA"/>
+        <content xmi:type="PLM:Connection" xmi:id="_ajy8UxKfEe-4CsrESsjhOA" potency="0">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_ajy8YBKfEe-4CsrESsjhOA" xLocation="399" yLocation="35">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+            <attributes>collapsed= true</attributes>
+          </visualizer>
+          <connectionEnd xmi:type="PLM:ConnectionEnd" xmi:id="_ajy8VRKfEe-4CsrESsjhOA" destination="_SeJDwBKfEe-4CsrESsjhOA" type="_xhgDrxKeEe-4CsrESsjhOA"/>
+          <connectionEnd xmi:type="PLM:ConnectionEnd" xmi:id="_ajy8XxKfEe-4CsrESsjhOA" destination="_MV1BsBKfEe-4CsrESsjhOA" type="_xhgDpRKeEe-4CsrESsjhOA"/>
+        </content>
+        <content xmi:type="PLM:Classification" xmi:id="_ajy8YRKfEe-4CsrESsjhOA" instance="_ajy8UxKfEe-4CsrESsjhOA" type="_xhgDoxKeEe-4CsrESsjhOA"/>
+        <content xmi:type="PLM:Connection" xmi:id="_bUG-8xKfEe-4CsrESsjhOA" potency="0">
+          <visualizer xmi:type="PLM:LMLVisualizer" xmi:id="_bUG_ABKfEe-4CsrESsjhOA" xLocation="489" yLocation="195">
+            <attributes>name= default</attributes>
+            <attributes>potency= default</attributes>
+            <attributes>levelIndex= noshow</attributes>
+            <attributes>ProximityClassification= 1</attributes>
+            <attributes>text= derived</attributes>
+            <attributes>graph= derived</attributes>
+            <attributes>form= derived</attributes>
+            <attributes>table= derived</attributes>
+            <attributes>app= derived</attributes>
+            <attributes>DSLRendering= false</attributes>
+            <attributes>ProximityIndication= name:1</attributes>
+            <attributes>collapsed= true</attributes>
+          </visualizer>
+          <connectionEnd xmi:type="PLM:ConnectionEnd" xmi:id="_bUG-9RKfEe-4CsrESsjhOA" destination="_XU7MgBKfEe-4CsrESsjhOA" type="_xhgDrxKeEe-4CsrESsjhOA"/>
+          <connectionEnd xmi:type="PLM:ConnectionEnd" xmi:id="_bUG-_xKfEe-4CsrESsjhOA" destination="_MV1BsBKfEe-4CsrESsjhOA" type="_xhgDpRKeEe-4CsrESsjhOA"/>
+        </content>
+        <content xmi:type="PLM:Classification" xmi:id="_bUG_ARKfEe-4CsrESsjhOA" instance="_bUG-8xKfEe-4CsrESsjhOA" type="_xhgDoxKeEe-4CsrESsjhOA"/>
+      </content>
+    </deepModel>
+  </PLM:Domain>
+</xmi:XMI>
